@@ -9,6 +9,8 @@ Some rules about the game are:
 - Game is fault-tolerant, it is robust against player crashes
 - Game is played in distributed manner using Java RMI.
 
+![](MazeGame.PNG)
+
 ## Key components:
 ### Tracker
 Tracker program is running with static/well-known IP address and port. Tracker program knowns value of N and K. When launched, Game contact the Tracker to obtain Game information, e.g. N and K.
