@@ -35,7 +35,7 @@ Stress Test is a program to test the robustness of the Game. It will create many
 
 ## How to run:
 ### Prepaire:
-	put all java file under same folder
+put all java file under same folder
 
 ### compile:
 - `javac Tracker.java`
@@ -45,16 +45,14 @@ for some later JDK(later than JDK 8), we need to give javafx module path in the 
 	`javac --module-path "path\to\javafx sdk\lib" --add-modules javafx.controls,javafx.fxml Game.java`
 	
 ### Run:
-- Tracker:
-	`java Tracker [port-number] [N] [K]`
-	port-number, N and K are optional, default port is 1099, N is 15 and K is 10
-- Game:
-	`java Game [IP-address] [port-number] [player-id]`
-	Ip-address and port is Tracker's IP address and port. player-id is two-character name of the player, like "aa"
-	for some later JDK(later than JDK 8), we need to give javafx module path in the command , example:
-		`java --module-path "C:\Program Files\Java\javafx-sdk-11.0.2\lib" --add-modules javafx.controls,javafx.fxml Game 127.0.0.1 1099 ab`
--Stress Test:
-	`java StressTest 127.0.0.1 1099 "java --module-path \"C:\Program Files\Java\javafx-sdk-11.0.2\lib\" --add-modules javafx.controls,javafx.fxml Game"`
+#### Tracker:
+`java Tracker [port-number] [N] [K]` , here port-number, N and K are optional, default port is 1099, N is 15 and K is 10
+#### Game:
+`java Game [IP-address] [port-number] [player-id]`, here Ip-address and port is Tracker's IP address and port. player-id is two-character name of the player, like "aa"
+for some later JDK(later than JDK 8), we need to give javafx module path in the command , example:
+	`java --module-path "C:\Program Files\Java\javafx-sdk-11.0.2\lib" --add-modules javafx.controls,javafx.fxml Game 127.0.0.1 1099 ab`
+#### Stress Test:
+`java StressTest 127.0.0.1 1099 "java --module-path \"C:\Program Files\Java\javafx-sdk-11.0.2\lib\" --add-modules javafx.controls,javafx.fxml Game"`
 	
 ### Note: 
 - Tracker should start first. Then Game program/Stress Test program can be lanuched.
