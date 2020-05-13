@@ -28,9 +28,9 @@ Some rules about the game are:
 	
 
 ## File description:
-- 'Tracker.java' is the main java file for Tracker program.
-- 'Game.java' is the main java file for Game program.
-- 'StressTest.java' is the main java file for Stress Test program
+- `Tracker.java` is the main java file for Tracker program.
+- `Game.java` is the main java file for Game program.
+- `StressTest.java` is the main java file for Stress Test program
 
 
 ## How to run:
@@ -38,23 +38,23 @@ Some rules about the game are:
 	put all java file under same folder
 
 ### compile:
-	javac Tracker.java
-	javac StressTest.java
-	javac Game.java
+	`javac Tracker.java`
+	`javac StressTest.java`
+	`javac Game.java`
 	for some later JDK(later than JDK 8), we need to give javafx module path in the command as:
-		javac --module-path "path\to\javafx sdk\lib" --add-modules javafx.controls,javafx.fxml Game.java
+		`javac --module-path "path\to\javafx sdk\lib" --add-modules javafx.controls,javafx.fxml Game.java`
 	
 ### Run:
 	- Tracker:
-		java Tracker [port-number] [N] [K]
+		`java Tracker [port-number] [N] [K]`
 		port-number, N and K are optional, default port is 1099, N is 15 and K is 10
 	- Game:
-		java Game [IP-address] [port-number] [player-id]
+		`java Game [IP-address] [port-number] [player-id]`
 		Ip-address and port is Tracker's IP address and port. player-id is two-character name of the player, like "aa"
 		for some later JDK(later than JDK 8), we need to give javafx module path in the command , example:
-		java --module-path "C:\Program Files\Java\javafx-sdk-11.0.2\lib" --add-modules javafx.controls,javafx.fxml Game 127.0.0.1 1099 ab
+			`java --module-path "C:\Program Files\Java\javafx-sdk-11.0.2\lib" --add-modules javafx.controls,javafx.fxml Game 127.0.0.1 1099 ab`
 	 -Stress Test:
-		java StressTest 127.0.0.1 1099 "java --module-path \"C:\Program Files\Java\javafx-sdk-11.0.2\lib\" --add-modules javafx.controls,javafx.fxml Game"
+		`java StressTest 127.0.0.1 1099 "java --module-path \"C:\Program Files\Java\javafx-sdk-11.0.2\lib\" --add-modules javafx.controls,javafx.fxml Game"`
 	
 ### Note: 
 	- Tracker should start first. Then Game program/Stress Test program can be lanuched.
