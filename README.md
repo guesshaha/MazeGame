@@ -11,7 +11,8 @@ Some rules about the game are:
 
 ## Key components:
 ### Tracker
-	Tracker program is running with static/well-known IP address and port. Tracker program knowns value of N and K. When launched, Game contact the Tracker to obtain Game information, e.g. N and K.
+	Tracker program is running with static/well-known IP address and port. 
+	Tracker program knowns value of N and K. When launched, Game contact the Tracker to obtain Game information, e.g. N and K.
 	feature:
 		- Each game program contact only when it joins the game or some player crashed and is trying to regenerated game servers.
 		
@@ -24,7 +25,9 @@ Some rules about the game are:
 		- shows primary server and backup server name
 
 ### Stress Test
-	Stress Test is a program to test the robustness of the Game. It will create many players (by invoking Game program), inject move requests to the players, kill players, and so on. It will create a new folder "StressTestOutput" and store all standard output/error of the game.
+	Stress Test is a program to test the robustness of the Game. 
+	It will create many players (by invoking Game program), inject move requests to the players, kill players, and so on. 
+	It will create a new folder "StressTestOutput" and store all standard output/error of the game.
 	
 
 ## File description:
@@ -38,7 +41,7 @@ Some rules about the game are:
 	put all java file under same folder
 
 ### compile:
-	`javac Tracker.java`
+	*javac Tracker.java*
 	`javac StressTest.java`
 	`javac Game.java`
 	for some later JDK(later than JDK 8), we need to give javafx module path in the command as:
