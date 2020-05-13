@@ -11,23 +11,20 @@ Some rules about the game are:
 
 ## Key components:
 ### Tracker
-	Tracker program is running with static/well-known IP address and port. 
-	Tracker program knowns value of N and K. When launched, Game contact the Tracker to obtain Game information, e.g. N and K.
-	feature:
-		- Each game program contact only when it joins the game or some player crashed and is trying to regenerated game servers.
+Tracker program is running with static/well-known IP address and port. Tracker program knowns value of N and K. When launched, Game contact the Tracker to obtain Game information, e.g. N and K.
+feature:
+	- Each game program contact only when it joins the game or some player crashed and is trying to regenerated game servers.
 		
 ### Game Program
-	Game is main program for user to play with. It has GUI with maze grid.
-	feature:
-		- shows name of local player
-		- shows current score of all the player
-		- shows each player and treasure position in the maze
-		- shows primary server and backup server name
+Game is main program for user to play with. It has GUI with maze grid.
+feature:
+- shows name of local player
+- shows current score of all the player
+- shows each player and treasure position in the maze
+- shows primary server and backup server name
 
 ### Stress Test
-	Stress Test is a program to test the robustness of the Game. 
-	It will create many players (by invoking Game program), inject move requests to the players, kill players, and so on. 
-	It will create a new folder "StressTestOutput" and store all standard output/error of the game.
+Stress Test is a program to test the robustness of the Game. It will create many players (by invoking Game program), inject move requests to the players, kill players, and so on. It will create a new folder "StressTestOutput" and store all standard output/error of the game.
 	
 
 ## File description:
@@ -41,23 +38,23 @@ Some rules about the game are:
 	put all java file under same folder
 
 ### compile:
-	*javac Tracker.java*
-	`javac StressTest.java`
-	`javac Game.java`
-	for some later JDK(later than JDK 8), we need to give javafx module path in the command as:
-		`javac --module-path "path\to\javafx sdk\lib" --add-modules javafx.controls,javafx.fxml Game.java`
+- `javac Tracker.java`
+- `javac StressTest.java`
+- `javac Game.java`
+for some later JDK(later than JDK 8), we need to give javafx module path in the command as:
+	`javac --module-path "path\to\javafx sdk\lib" --add-modules javafx.controls,javafx.fxml Game.java`
 	
 ### Run:
-	- Tracker:
-		`java Tracker [port-number] [N] [K]`
-		port-number, N and K are optional, default port is 1099, N is 15 and K is 10
-	- Game:
-		`java Game [IP-address] [port-number] [player-id]`
-		Ip-address and port is Tracker's IP address and port. player-id is two-character name of the player, like "aa"
-		for some later JDK(later than JDK 8), we need to give javafx module path in the command , example:
-			`java --module-path "C:\Program Files\Java\javafx-sdk-11.0.2\lib" --add-modules javafx.controls,javafx.fxml Game 127.0.0.1 1099 ab`
-	 -Stress Test:
-		`java StressTest 127.0.0.1 1099 "java --module-path \"C:\Program Files\Java\javafx-sdk-11.0.2\lib\" --add-modules javafx.controls,javafx.fxml Game"`
+- Tracker:
+	`java Tracker [port-number] [N] [K]`
+	port-number, N and K are optional, default port is 1099, N is 15 and K is 10
+- Game:
+	`java Game [IP-address] [port-number] [player-id]`
+	Ip-address and port is Tracker's IP address and port. player-id is two-character name of the player, like "aa"
+	for some later JDK(later than JDK 8), we need to give javafx module path in the command , example:
+		`java --module-path "C:\Program Files\Java\javafx-sdk-11.0.2\lib" --add-modules javafx.controls,javafx.fxml Game 127.0.0.1 1099 ab`
+-Stress Test:
+	`java StressTest 127.0.0.1 1099 "java --module-path \"C:\Program Files\Java\javafx-sdk-11.0.2\lib\" --add-modules javafx.controls,javafx.fxml Game"`
 	
 ### Note: 
-	- Tracker should start first. Then Game program/Stress Test program can be lanuched.
+- Tracker should start first. Then Game program/Stress Test program can be lanuched.
