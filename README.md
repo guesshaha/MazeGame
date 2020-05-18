@@ -54,7 +54,7 @@ for some later JDK(later than JDK 8), we need to give javafx module path in the 
 `java Game [IP-address] [port-number] [player-id]`, here Ip-address and port is Tracker's IP address and port. player-id is two-character name of the player, like "aa"
 for some later JDK(later than JDK 8), we need to give javafx module path in the command , example:
 	`java --module-path "C:\Program Files\Java\javafx-sdk-11.0.2\lib" --add-modules javafx.controls,javafx.fxml Game 127.0.0.1 1099 ab`
-standard input rules:
+##### standard input rules:
 - "0": refresh page
 - "1": move left
 - "2": move down
