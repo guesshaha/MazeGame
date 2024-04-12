@@ -66,3 +66,13 @@ for some later JDK(later than JDK 8), we need to give javafx module path in the 
 	
 ### Note: 
 - Tracker should start first. Then Game program/Stress Test program can be lanuched.
+
+
+### process
+
+#### Game
+main program run. after launch() run the start() will start by javafx
+the GUI will initial first and a listener will change GUI if intProperty change
+a new thread will run to run the main logic the game.
+
+the player will contact tracker first and get the information about all the gamenode, and use the remote  object directly so the traffic is not in the traker, it is in the primary server.
